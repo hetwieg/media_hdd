@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteBase /
+RewriteRule ^images/covers/folders/(.+)\.([A-Z]{3})?$ server.php?action=dir_cover&img=$1&ext=$2&%{QUERY_STRING} [NC,L]
+RewriteRule ^images/covers/(.+)\.([A-Z]{3})?$         server.php?action=cover&img=$1&ext=$2&%{QUERY_STRING}     [NC,L]
+
+RewriteRule ^server/list(\.xml)?$                     server.php?action=list&%{QUERY_STRING}                       [NC,L]
+RewriteRule ^server/filmlist(\.xml)?$                 server.php?action=filmlist&%{QUERY_STRING}                   [NC,L]
+RewriteRule ^server/imdb/tt([0-9]+)\.xml$             server.php?action=imdb&id=$1&%{QUERY_STRING}                 [NC,L]
+RewriteRule ^server/vlc/([A-Z0-9]+)/([A-Z]+)(\.xml)?$ server.php?action=vlc&subaction=$2&source=$1&%{QUERY_STRING} [NC,L]
+
+RewriteRule ^([0-9A-Z]+)(\.html)?$             index.php?action=$1&%{QUERY_STRING}              [NC,L]
+RewriteRule ^([0-9A-Z]+)/([0-9A-Z]+)(\.html)?$ index.php?action=$1&subaction=$2&%{QUERY_STRING} [NC,L]
