@@ -136,9 +136,8 @@ switch($subaction['key']) {
 case "add":
 	echo '<form name="form" id="form" action="/'.$file.'/manege.html?do=addnew" method="post"><table width="500" border="0" cellspacing="2" cellpadding="0">';
 	foreach($velden as $key => $value)
-	{
-		$change = ($key == "imdb") ? ' onchange="update_form_imdb()"' : '';		
-		$field = '<input type="text" name="'.$key.'" id="'.$key.'" value="'.$value['def'].'"'.$change.'/>';
+	{	
+		$field = '<input type="text" name="'.$key.'" id="'.$key.'" value="'.$value['def'].'"/>';
 		
 		if(isset($value['select'])) $field = makeSelect($value['select'], $key, $value['def']);
 		
@@ -168,8 +167,7 @@ case "edit":
 	echo '<table width="500" border="0" cellspacing="2" cellpadding="0">';
 	foreach($velden as $key => $value)
 	{
-		$change = ($key == "imdb") ? ' onchange="update_form_imdb()"' : '';
-		$field = '<input type="text" name="'.$key.'" id="'.$key.'" value="'.$row[$key].'"'.$change.'/>';
+		$field = '<input type="text" name="'.$key.'" id="'.$key.'" value="'.$row[$key].'"/>';
 		
 		if(isset($value['select']))
 		{
