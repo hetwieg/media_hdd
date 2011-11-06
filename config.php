@@ -35,7 +35,7 @@
 	$actions['afspelen']['default_submenu'] = "manage";  // */
 	
 	$actions['films']['title'] = "Films";
-	$actions['films']['file'] = "lists.php";
+	$actions['films']['file'] = "films.php";
 	$actions['films']['submenu'] = array();
 	$actions['films']['submenu']['manage'] = "Beheren";
 	$actions['films']['submenu']['add'] = "Toevoegen";
