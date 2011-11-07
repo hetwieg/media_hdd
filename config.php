@@ -27,34 +27,26 @@
 	$actions = array();
 	$actions['afspelen']['title'] = "Afspelen";
 	$actions['afspelen']['file'] = "afspelen.php";
-/*	$actions['afspelen']['submenu'] = array();
-	$actions['afspelen']['submenu']['manage'] = "Beheren";
-	$actions['afspelen']['submenu']['add'] = "Toevoegen";
-	$actions['afspelen']['submenu']['edit'] = "!Aanpassen";
-	$actions['afspelen']['submenu']['delete'] = "!Delete";
-	$actions['afspelen']['default_submenu'] = "manage";  // */
 	
-	$actions['films']['title'] = "Films";
-	$actions['films']['file'] = "films.php";
-	$actions['films']['submenu'] = array();
-	$actions['films']['submenu']['manage'] = "Beheren";
-	$actions['films']['submenu']['add'] = "Toevoegen";
-	$actions['films']['submenu']['edit'] = "!Aanpassen";
-	$actions['films']['submenu']['delete'] = "!Delete";
-	$actions['films']['default_submenu'] = "manage";
+	$db_file = "films";
+	$actions[$db_file]['title'] = "Films";
+	$actions[$db_file]['file'] = $db_file.".php";
+	$actions[$db_file]['submenu'] = array();
+	$actions[$db_file]['submenu']['manage'] = "Beheren";
+	$actions[$db_file]['submenu']['add'] = "Toevoegen";
+	$actions[$db_file]['submenu']['edit'] = "!Aanpassen";
+	$actions[$db_file]['submenu']['delete'] = "!Delete";
+	$actions[$db_file]['default_submenu'] = "manage";
 	
-/*	$actions['verhuur']['title'] = "Verhuur";
-	$actions['verhuur']['file'] = "verhuur.php";
-	$actions['verhuur']['submenu']['manage'] = "Beheren";
-	$actions['verhuur']['submenu']['add'] = "Toevoegen";
-	$actions['verhuur']['submenu']['delete'] = "!Delete";
-	$actions['verhuur']['default_submenu'] = "manage";
-	
-	$actions['stats']['title'] = "Statestieken";
-	$actions['stats']['file'] = "stats.php";
-	
-	$actions['info']['title'] = "Informatie";
-	$actions['info']['file'] = "info.php";	 // */
-	
+	$db_file = "lists";
+	$actions[$db_file]['title'] = "Films (D)";
+	$actions[$db_file]['file'] = $db_file.".php";
+	$actions[$db_file]['submenu'] = array();
+	$actions[$db_file]['submenu']['manage'] = "Beheren";
+	$actions[$db_file]['submenu']['add'] = "Toevoegen";
+	$actions[$db_file]['submenu']['edit'] = "!Aanpassen";
+	$actions[$db_file]['submenu']['delete'] = "!Delete";
+	$actions[$db_file]['default_submenu'] = "manage";
+		
 	$actions['default'] = 'afspelen';
 ?>

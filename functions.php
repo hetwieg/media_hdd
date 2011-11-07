@@ -138,11 +138,24 @@
 	/* --- List Actions ---------------------------------- */
 	function makeSelect($type, $name = 'select', $value = '')
 	{
+		global $db;
+				
 		$t = '<select id="'.$name.'" name="'.$name.'">';
 		
 		if(substr($type,0, strlen("FILE:R:")) == "FILE:R:") {
 			$dir_list = directory_list(substr($type,strlen("FILE:R:")),false,false,".|..|.DS_Store|.svn|index.jpg|index.png");
 			$t .= SelectlistItem($dir_list, $value, "");
+		}
+		
+		if(substr($type,0, strlen("SQL:")) == "SQL:") {
+			dbConnect($db);
+	        $rs = mysql_query(substr($type,strlen("SQL:")),$db['link']);
+			while ($row = mysql_fetch_array($rs)) {
+				$select = "";
+				if($row['key'] == $value) $select = ' selected="selected"'; 
+				
+				$t .= '<option value="'.$row['key'].'"'.$select.'>'.$row['value'].'</option>';
+			}
 		}
 		
 		$t .= "</select>";

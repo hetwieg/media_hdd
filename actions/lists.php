@@ -11,7 +11,7 @@ $velden['imdb']['title'] = "IMDB Tag";
 $velden['imdb']['def'] = "tt";
 $velden['file']['title'] = "File";
 $velden['file']['def'] = "/media_hdd/films/";
-$velden['file']['select'] = "FILE:R:/media_hdd/films/";
+$velden['file']['select'] = "SQL:SELECT `id` AS `key`, `file` AS `value` FROM movies";
 $velden['rating']['title'] = "Rating %";
 $velden['rating']['def'] = "50";
 $velden['release']['title'] = "Release";
@@ -40,11 +40,7 @@ $actions['edit']['image'] = "/images/edit.png";
 $actions['delete']['title'] = "Verwijder";
 $actions['delete']['image'] = "/images/delete.png";
 
-$actions['update_file']['type']  = "do";
-$actions['update_file']['title'] = "Update";
-$actions['update_file']['image'] = "/images/update.png";
-
-$file = 'films';
+$file = 'lists';
 // --------------------------------------------------------------
 $sql = "";
 if(isset($_GET['do'])){

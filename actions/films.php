@@ -40,9 +40,9 @@ $actions['edit']['image'] = "/images/edit.png";
 $actions['delete']['title'] = "Verwijder";
 $actions['delete']['image'] = "/images/delete.png";
 
-$actions['update_file']['type']  = "do";
-$actions['update_file']['title'] = "Update";
-$actions['update_file']['image'] = "/images/update.png";
+//$actions['update_file']['type']  = "do";
+//$actions['update_file']['title'] = "Update";
+//$actions['update_file']['image'] = "/images/update.png";
 
 $file = 'films';
 // --------------------------------------------------------------
